@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <main>
       <Provider store={store}>
-        {/* <CakeContainer /> */}
-        <CakeContainerHookMethod />
+        <CakeContainer />
+        {/* <CakeContainerHookMethod /> */}
         <IceCreamContainer />
         {/* <IceCreamHookMethod /> */}
       </Provider>

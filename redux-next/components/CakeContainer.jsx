@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 const CakeContainer = (props) => {
     const [noOfCakes, setNoOfCakes] = React.useState(1);
 
-
     return (
         <div>
             <h2>Number of Cakes: {props.noOfCakes}</h2>
@@ -13,7 +12,7 @@ const CakeContainer = (props) => {
                 setNoOfCakes(parseInt(e.target.value));
             }} />
             <button onClick={() => {
-                props.buyCake()
+                props.buyCake(noOfCakes);
             }}>Buy Cake</button>
         </div>
     )
@@ -21,8 +20,8 @@ const CakeContainer = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        noOfCakes: state.noOfCakes,
-        recentActionMessage: state.recentActionMessage,
+        noOfCakes: state.cake.noOfCakes,
+        recentActionMessage: state.cake.recentActionMessage,
     }
 }
 
