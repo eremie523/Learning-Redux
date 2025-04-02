@@ -1,0 +1,5 @@
+node_modules/
+
+redux-next/node_modules
+
+redux-next/.next
