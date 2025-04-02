@@ -15,8 +15,8 @@ const cakeReducer = function (state = initCakeState, action) {
         case BUY_CAKE:
             return {
                 ...state,
-                noOfCakes: state.noOfCakes - 1,
-                recentActionMessage: 'A cake was bought!',
+                noOfCakes: state.noOfCakes - action.payload.noOfCakes,
+                recentActionMessage: `${action.payload.noOfCakes} cake was bought!`,
             };
         default:
             return state;
